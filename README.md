@@ -189,8 +189,8 @@ For vertical slides (sub-slides):
 
 ## 🔗 Related Resources
 
-- **Blog Post**: [Full blog version on Doctors Who Code](https://doctorswhocode.com)
-- **CodeCraftMD**: [AI-powered medical billing platform](https://codecraftmd.com)
+- **Blog Post**: [Full blog version on Doctors Who Code](https://doctorswhocode.blog/blog/)
+- **CodeCraftMD**: [AI-powered medical billing platform](https://codecraftmd.com/)
 - **Reveal.js Documentation**: [https://revealjs.com/](https://revealjs.com/)
 
 ---
