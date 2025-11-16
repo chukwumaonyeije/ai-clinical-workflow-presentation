@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Future of Clinical Documentation: A Practical AI Tech Stack for Physicians Who Code">
+    <meta name="author" content="Dr. Chukwuma Onyeije">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Future of Clinical Documentation: AI Tech Stack">
+    <meta property="og:description" content="A comprehensive technical guide for physician-developers on building AI-powered clinical workflows">
+    <meta property="og:image" content="https://doctorswhocode.com/og-image.jpg">
+    
+    <title>The Future of Clinical Documentation: AI Tech Stack</title>
+    
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+    
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+        .reveal .emoji { font-style: normal; }
+        .reveal .slides section .fragment.highlight-current-blue { opacity: 1; visibility: inherit; }
+        .reveal .slides section .fragment.highlight-current-blue.current-fragment { color: #42affa; }
+        .reveal blockquote { font-style: italic; background: rgba(255,255,255,0.05); padding: 20px; }
+        .reveal small { font-size: 0.6em; }
+        .reveal ul { font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- TITLE SLIDE -->
+            <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+                <h1>🏥 The Future of Clinical Documentation</h1>
+                <h3>A Practical AI Tech Stack for Physicians Who Code</h3>
+                <p style="margin-top: 50px;">
+                    <small>Dr. Chukwuma Onyeije, MFM Specialist</small><br>
+                    <small>Founder, Doctors Who Code & CodeCraftMD</small>
+                </p>
+            </section>
+
+            <!-- THE AI PIPELINE -->
+            <section>
+                <h2>🚀 The Complete AI-Enhanced Clinical Pipeline</h2>
+                <p style="font-size: 1.8em; margin-top: 50px;">
+                    🎤 Ambient → 🧠 EvidenceMD<br>
+                    → 💼 CodeCraftMD → 🏥 EMR Integration
+                </p>
+            </section>
+
+            <!-- PROBLEM STATEMENT -->
+            <section>
+                <section>
+                    <h2>🎯 Why Clinicians Need an AI Workflow</h2>
+                    <h3>Not Another Search Tool</h3>
+                    <p style="margin-top: 40px;">Healthcare has entered a phase where <strong>LLMs can meaningfully reduce clinical friction</strong>—not by becoming new versions of UpToDate, but by <strong>operating on our actual clinical notes</strong></p>
+                </section>
+                
+                <section>
+                    <h3>The Paradigm Shift</h3>
+                    <table style="font-size: 0.8em; margin-top: 40px;">
+                        <tr>
+                            <th>From</th>
+                            <th>To</th>
+                        </tr>
+                        <tr>
+                            <td>🔍 Search</td>
+                            <td>🧠 Reasoning</td>
+                        </tr>
+                        <tr>
+                            <td>📄 Static guidelines</td>
+                            <td>🎯 Context-aware analysis</td>
+                        </tr>
+                        <tr>
+                            <td>📝 Template-based charting</td>
+                            <td>🎤 Ambient documentation</td>
+                        </tr>
+                        <tr>
+                            <td>👨‍💻 Manual coding</td>
+                            <td>⚡ Automated revenue integrity</td>
+                        </tr>
+                    </table>
+                </section>
+                
+                <section>
+                    <h3>The Three-Component Stack</h3>
+                    <ol style="font-size: 1.1em; margin-top: 40px;">
+                        <li class="fragment">🎤 <strong>Ambient Transcription</strong> (Athelas Scribe, Plaud Note)</li>
+                        <li class="fragment">🧠 <strong>EvidenceMD</strong> for clinical reasoning and guideline integration</li>
+                        <li class="fragment">💼 <strong>CodeCraftMD</strong> for automated coding, documentation scoring, and billing</li>
+                    </ol>
+                </section>
+            </section>
+
+            <!-- COMPONENT 1: AMBIENT TRANSCRIPTION -->
+            <section>
+                <section data-background-color="#1a1a2e">
+                    <h2>🎤 Component 1: Ambient Transcription</h2>
+                    <h3>The Foundation Layer</h3>
+                </section>
+                
+                <section>
+                    <h3>Available Tools</h3>
+                    <ul>
+                        <li class="fragment">✅ <strong>Athelas Scribe</strong></li>
+                        <li class="fragment">✅ <strong>Plaud Note</strong></li>
+                        <li class="fragment">✅ <strong>DAX-style AI ambient systems</strong></li>
+                        <li class="fragment">✅ <strong>Local Whisper implementations</strong> (for privacy-focused practices)</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>💎 Key Value of Ambient Transcription</h3>
+                    <ul>
+                        <li class="fragment">📝 Captures a <strong>complete clinical narrative</strong></li>
+                        <li class="fragment">🎯 Preserves <strong>nuance</strong> that template-driven notes miss</li>
+                        <li class="fragment">⚡ Provides <strong>high-signal input</strong> for LLM ingestion</li>
+                        <li class="fragment">🧠 Reduces <strong>cognitive switching</strong> during patient care</li>
+                        <li class="fragment">📊 Supports downstream <strong>structured note creation</strong></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>👨‍💻 For Developers</h3>
+                    <p>Ambient tools typically use speech-to-text models like:</p>
+                    <ul style="margin-top: 30px;">
+                        <li>🤖 <strong>Whisper Large</strong></li>
+                        <li>🤖 <strong>Deepgram Nova 2</strong></li>
+                        <li>🤖 <strong>AssemblyAI Conformer-2</strong></li>
+                    </ul>
+                    <p style="margin-top: 40px; font-size: 0.9em;">The transcript becomes the <strong>raw data layer</strong> of the workflow</p>
+                </section>
+            </section>
+
+            <!-- COMPONENT 2: EVIDENCEMD -->
+            <section>
+                <section data-background-color="#16213e">
+                    <h2>🧠 Component 2: EvidenceMD</h2>
+                    <h3>Contextual Clinical Reasoning</h3>
+                </section>
+                
+                <section>
+                    <h3>What Makes It Different</h3>
+                    <p style="font-size: 1.1em;">First clinical LLM I've tested that can <strong>ingest full-length consult notes without truncation</strong></p>
+                    <p style="margin-top: 40px; font-size: 0.8em;">(Large context window: 65k–200k+ tokens)</p>
+                </section>
+                
+                <section>
+                    <h3>🌟 What EvidenceMD Can Do</h3>
+                    <ul style="font-size: 0.85em;">
+                        <li class="fragment">✅ Apply <strong>criteria-based logic</strong> directly to your note</li>
+                        <li class="fragment">✅ Identify <strong>gaps in documentation</strong></li>
+                        <li class="fragment">✅ Provide <strong>case-specific management recommendations</strong></li>
+                        <li class="fragment">✅ Highlight <strong>latent safety issues</strong></li>
+                        <li class="fragment">✅ Expand or refine the <strong>differential diagnosis</strong></li>
+                        <li class="fragment">✅ Detect <strong>conflicts</strong> between HPI, exam, and plan</li>
+                        <li class="fragment">✅ Offer <strong>peer-review-style critiques</strong></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>💬 Example Queries</h3>
+                    <blockquote class="fragment" style="margin: 30px 0;">
+                        "Does this patient meet criteria for preeclampsia today?"
+                    </blockquote>
+                    <blockquote class="fragment" style="margin: 30px 0;">
+                        "Does the plan align with SMFM guidelines?"
+                    </blockquote>
+                    <blockquote class="fragment" style="margin: 30px 0;">
+                        "What risk factors are under-documented?"
+                    </blockquote>
+                    <blockquote class="fragment" style="margin: 30px 0;">
+                        "Which elements are needed for Level 4 MDM?"
+                    </blockquote>
+                </section>
+                
+                <section data-background-color="#0f3460">
+                    <h3>⚡ Key Distinction</h3>
+                    <p style="font-size: 1.5em; margin-top: 50px;">
+                        <strong>EvidenceMD is not a search tool—<br>it's a contextual reasoning layer</strong>
+                    </p>
+                </section>
+                
+                <section>
+                    <h3>🔬 Technical Under the Hood (Likely)</h3>
+                    <ul style="font-size: 0.8em;">
+                        <li class="fragment">🧬 Large-context LLM architecture (65k–200k tokens+)</li>
+                        <li class="fragment">🧬 Reinforcement tuning on clinical texts</li>
+                        <li class="fragment">🧬 Medical-specific RAG pipeline (ACOG, ADA, SMFM, NIH)</li>
+                        <li class="fragment">🧬 Criteria chains for rule-based evaluation</li>
+                        <li class="fragment">🧬 Tooling for structured output formats</li>
+                    </ul>
+                    <p class="fragment" style="margin-top: 40px; font-size: 1.1em;">
+                        🚀 <strong>This is the future of clinical decision support</strong>
+                    </p>
+                </section>
+            </section>
+
+            <!-- COMPONENT 3: CODECRAFTMD -->
+            <section>
+                <section data-background-color="#1a1a2e">
+                    <h2>💼 Component 3: CodeCraftMD</h2>
+                    <h3>Automating the Billing & Compliance Layer</h3>
+                </section>
+                
+                <section>
+                    <h3>⚙️ What CodeCraftMD Handles</h3>
+                    <ul style="font-size: 0.85em;">
+                        <li class="fragment">✅ <strong>ICD-10 code extraction</strong></li>
+                        <li class="fragment">✅ <strong>CPT level + MDM scoring</strong></li>
+                        <li class="fragment">✅ <strong>Documentation completeness checks</strong></li>
+                        <li class="fragment">✅ <strong>Internal consistency</strong> (HPI → Exam → MDM)</li>
+                        <li class="fragment">✅ <strong>Under-coding detection</strong></li>
+                        <li class="fragment">✅ <strong>Audit-ready CMS-1500 generation</strong></li>
+                        <li class="fragment">✅ <strong>FHIR-compatible data export</strong></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>🛠️ Technical Architecture</h3>
+                    <ul style="font-size: 0.85em;">
+                        <li class="fragment">🔹 Hybrid of <strong>deterministic rules</strong> (CMS MDM table logic)</li>
+                        <li class="fragment">🔹 <strong>LLM classification layers</strong></li>
+                        <li class="fragment">🔹 <strong>Regex + ontology mapping</strong> for ICD-10</li>
+                        <li class="fragment">🔹 <strong>JSON schema validation</strong></li>
+                        <li class="fragment">🔹 Custom validators for <strong>"clinical plausibility scoring"</strong></li>
+                    </ul>
+                </section>
+                
+                <section data-background-color="#16213e">
+                    <h3>✅ Closes the Loop</h3>
+                    <p style="font-size: 1.6em; margin-top: 50px;">
+                        Clinical Reasoning<br>
+                        ↓<br>
+                        Documentation<br>
+                        ↓<br>
+                        Compliance<br>
+                        ↓<br>
+                        Billing
+                    </p>
+                </section>
+            </section>
+
+            <!-- TECH STACK -->
+            <section>
+                <section data-background-color="#0f3460">
+                    <h2>🖥️ The Full Tech Stack</h2>
+                    <h3>For Clinicians Who Code</h3>
+                </section>
+                
+                <section>
+                    <h3>🎨 Front-End Layer</h3>
+                    <ul>
+                        <li>⚛️ <strong>React / Next.js</strong> (fast, clean UI for clinicians)</li>
+                        <li>📱 <strong>Expo or Flutter</strong> (if building mobile apps)</li>
+                        <li>🎨 <strong>TailwindCSS</strong> for rapid prototyping</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>🔧 Back-End Layer</h3>
+                    <ul>
+                        <li>⚡ <strong>FastAPI</strong> (Python-based, perfect for AI workflows)</li>
+                        <li>🟢 <strong>Node.js</strong> (if using TypeScript end-to-end)</li>
+                        <li>🗄️ <strong>Supabase or Firebase</strong> (easy auth + data storage)</li>
+                        <li>🐘 <strong>PostgreSQL with pgvector</strong> (if storing embeddings)</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>🤖 AI Services Layer</h3>
+                    <table style="font-size: 0.7em; width: 100%;">
+                        <tr>
+                            <td style="vertical-align: top; width: 25%;"><strong>🎤 Ambient</strong></td>
+                            <td>Whisper, Deepgram, AssemblyAI</td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;"><strong>🧠 Reasoning</strong></td>
+                            <td>Claude 3.5 Sonnet, GPT-5.1, Llama 3.1 70B (local)</td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;"><strong>🏥 Medical Guidance</strong></td>
+                            <td>EvidenceMD (cloud), Custom RAG pipeline</td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;"><strong>💼 Billing</strong></td>
+                            <td>CodeCraftMD, Local ICD-10/CPT ontologies</td>
+                        </tr>
+                    </table>
+                </section>
+                
+                <section>
+                    <h3>🔗 Integration Layer</h3>
+                    <ul>
+                        <li>📊 <strong>FHIR</strong> (Epic/Athena/Cerner export)</li>
+                        <li>📡 <strong>HL7v2</strong> for legacy systems</li>
+                        <li>🏥 <strong>HapiFHIR server</strong> for testing</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- WHY THIS MATTERS -->
+            <section>
+                <section data-background-color="#283b95">
+                    <h2>🌍 Why This Matters</h2>
+                    <h3>For the Future of Clinical Practice</h3>
+                </section>
+                
+                <section>
+                    <h3>First Time in Clinical History</h3>
+                    <p style="font-size: 0.9em;">We can now:</p>
+                    <ul style="font-size: 0.85em;">
+                        <li class="fragment">✅ Capture the <strong>entire patient encounter</strong></li>
+                        <li class="fragment">✅ Transform it into a <strong>structured medical document</strong></li>
+                        <li class="fragment">✅ Apply <strong>context-aware guideline reasoning</strong></li>
+                        <li class="fragment">✅ Improve documentation for <strong>legal, quality, and billing</strong></li>
+                        <li class="fragment">✅ Automate <strong>code generation and claim submission</strong></li>
+                        <li class="fragment" style="color: #42affa;">✅ Do all of this <strong>without increasing cognitive load</strong></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>💡 For Clinicians Who Also Code</h3>
+                    <p style="font-size: 0.9em;">Build tools that:</p>
+                    <ul style="font-size: 0.85em;">
+                        <li class="fragment">🎯 Reduce complexity</li>
+                        <li class="fragment">🎯 Eliminate duplicate work</li>
+                        <li class="fragment">🎯 Empower physicians</li>
+                        <li class="fragment">🎯 Preserve clinical judgment</li>
+                        <li class="fragment">🎯 Enhance safety</li>
+                        <li class="fragment">🎯 Accelerate chart closure</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- DISCLOSURE -->
+            <section data-background-color="#1a1a2e">
+                <h2>⚠️ Important Disclosure</h2>
+                <p style="font-size: 1.3em; margin-top: 50px;">
+                    I have <strong>no financial ties to EvidenceMD</strong>
+                </p>
+                <p style="margin-top: 30px;">
+                    No compensation, no advisory role, no affiliation.
+                </p>
+                <p style="margin-top: 20px; font-size: 0.9em;">
+                    It's simply a platform I choose to use because of its unusually deep context window and high clinical reasoning fidelity.
+                </p>
+            </section>
+
+            <!-- REAL-WORLD USE -->
+            <section data-background-color="#16213e">
+                <h2>🔥 This Isn't Theoretical</h2>
+                <p style="font-size: 1.5em; margin-top: 80px;">
+                    <strong>This is the stack I use daily<br>in real MFM practice</strong>
+                </p>
+            </section>
+
+            <!-- CONCLUSION -->
+            <section>
+                <section data-background-gradient="linear-gradient(to bottom, #0f3460, #16213e)">
+                    <h2>🚀 The AI-Augmented Physician</h2>
+                </section>
+                
+                <section>
+                    <blockquote style="font-size: 1.1em;">
+                        AI is not here to replace clinicians.<br><br>
+                        It's here to eliminate the administrative friction that has kept clinicians from practicing at the top of their license.
+                    </blockquote>
+                </section>
+                
+                <section>
+                    <h3>The New Paradigm</h3>
+                    <table style="font-size: 0.75em; margin-top: 40px;">
+                        <tr>
+                            <th>From</th>
+                            <th>To</th>
+                        </tr>
+                        <tr>
+                            <td>🔍 Search</td>
+                            <td>🧠 Reasoning</td>
+                        </tr>
+                        <tr>
+                            <td>📄 Templates</td>
+                            <td>🎤 Ambient understanding</td>
+                        </tr>
+                        <tr>
+                            <td>👨‍💻 Manual coding</td>
+                            <td>⚡ Automated revenue integrity</td>
+                        </tr>
+                        <tr>
+                            <td>🔗 Fragmented systems</td>
+                            <td>🎯 Cohesive pipelines</td>
+                        </tr>
+                    </table>
+                </section>
+                
+                <section data-background-color="#283b95">
+                    <h3>For Physicians Who Code</h3>
+                    <p style="font-size: 1.6em; margin-top: 80px;">
+                        <strong>This is our moment<br>to shape the future</strong>
+                    </p>
+                </section>
+            </section>
+
+            <!-- CALL TO ACTION -->
+            <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+                <h2>🤝 Let's Collaborate</h2>
+                <p style="font-size: 1.2em; margin-top: 40px;">
+                    <strong>Dr. Chukwuma Onyeije</strong>
+                </p>
+                <p style="margin-top: 30px;">
+                    🌐 DoctorsWhoCode.com<br>
+                    💼 CodeCraftMD.com<br>
+                    🏥 Maternal-Fetal Medicine Specialist<br>
+                    🏢 Medical Director, Atlanta Perinatal Associates
+                </p>
+                <p style="margin-top: 50px; font-size: 0.7em;">
+                    #DoctorsWhoCode #AIinHealthcare #ClinicalDocumentation<br>
+                    #AmbientAI #EvidenceMD #CodeCraftMD #HealthTech
+                </p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            backgroundTransition: 'fade',
+            
+            // Display options
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0,
+            
+            // Keyboard shortcuts
+            keyboard: {
+                13: 'next', // go to next slide when ENTER is pressed
+                27: function() {}, // do nothing when ESC is pressed
+            },
+            
+            // Plugins
+            plugins: [ 
+                RevealMarkdown, 
+                RevealHighlight, 
+                RevealNotes,
+                RevealZoom 
+            ]
+        });
+    </script>
+</body>
+</html>
