@@ -198,7 +198,7 @@ For vertical slides (sub-slides):
 ## 📬 Contact
 
 **Dr. Chukwuma Onyeije**
-- 🌐 Website: [DoctorsWhoCode.com](https://doctorswhocode.com)
+- 🌐 Website: [DoctorsWhoCode.blog](https://doctorswhocode.blog)
 - 💼 Project: [CodeCraftMD.com](https://codecraftmd.com)
 - 🏥 Position: Maternal-Fetal Medicine Specialist, Medical Director at Atlanta Perinatal Associates
 
