@@ -11,7 +11,7 @@
 
 ## 🚀 Live Presentation
 
-**View the presentation here:** [https://YOUR-USERNAME.github.io/ai-clinical-workflow-presentation/](https://YOUR-USERNAME.github.io/ai-clinical-workflow-presentation/)
+**View the presentation here:** [https://chukwumaonyeije.github.io/ai-clinical-workflow-presentation/](https://chukwumaonyeije.github.io/ai-clinical-workflow-presentation/)
 
 ---
 
