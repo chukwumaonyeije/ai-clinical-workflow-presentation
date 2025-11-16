@@ -23,9 +23,66 @@
         .reveal .emoji { font-style: normal; }
         .reveal .slides section .fragment.highlight-current-blue { opacity: 1; visibility: inherit; }
         .reveal .slides section .fragment.highlight-current-blue.current-fragment { color: #42affa; }
-        .reveal blockquote { font-style: italic; background: rgba(255,255,255,0.05); padding: 20px; }
+        .reveal blockquote { 
+            font-style: italic; 
+            background: rgba(255,255,255,0.05); 
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #42affa;
+        }
         .reveal small { font-size: 0.6em; }
         .reveal ul { font-size: 0.9em; }
+        
+        /* Better readability */
+        .reveal p { line-height: 1.6; }
+        .reveal li { line-height: 1.5; margin-bottom: 0.5em; }
+        
+        /* Better table styling */
+        .reveal table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto;
+        }
+        
+        .reveal table th, .reveal table td {
+            padding: 12px 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .reveal table th {
+            background: rgba(255,255,255,0.1);
+            font-weight: bold;
+        }
+        
+        /* Touch-friendly controls */
+        .reveal .controls {
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        /* Mobile-first responsive design */
+        @media screen and (max-width: 768px) {
+            .reveal h1 { font-size: 1.8em !important; }
+            .reveal h2 { font-size: 1.5em !important; }
+            .reveal h3 { font-size: 1.2em !important; }
+            .reveal p { font-size: 0.9em !important; line-height: 1.6; }
+            .reveal ul, .reveal ol { font-size: 0.75em !important; }
+            .reveal blockquote { font-size: 0.85em !important; padding: 15px; }
+            
+            /* Make tables scrollable on mobile */
+            .reveal table { 
+                display: block; 
+                overflow-x: auto; 
+                white-space: nowrap; 
+                font-size: 0.65em !important;
+            }
+            
+            .reveal .controls {
+                bottom: 10px;
+                right: 10px;
+                transform: scale(1.2);
+            }
+        }
     </style>
 </head>
 <body>
@@ -437,6 +494,7 @@
             controls: true,
             progress: true,
             center: true,
+            touch: true,
             transition: 'slide', // none/fade/slide/convex/concave/zoom
             backgroundTransition: 'fade',
             
@@ -446,6 +504,16 @@
             margin: 0.1,
             minScale: 0.2,
             maxScale: 2.0,
+            
+            // Mobile and interaction options
+            respondToHashChanges: true,
+            embedded: false,
+            help: true,
+            showNotes: false,
+            autoPlayMedia: null,
+            preloadIframes: null,
+            autoAnimate: true,
+            autoAnimateDuration: 0.4,
             
             // Keyboard shortcuts
             keyboard: {
