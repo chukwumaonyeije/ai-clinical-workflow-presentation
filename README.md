@@ -188,7 +188,7 @@ For vertical slides (sub-slides):
 
 ## 🔗 Related Resources
 
-- **Blog Post**: [Full blog version on Doctors Who Code](https://doctorswhocode.com)
+- **Blog Post**: [Full blog version on Doctors Who Code](https://doctorswhocode.blog/)
 - **CodeCraftMD**: [AI-powered medical billing platform](https://codecraftmd.com)
 - **Reveal.js Documentation**: [https://revealjs.com/](https://revealjs.com/)
 
@@ -197,7 +197,7 @@ For vertical slides (sub-slides):
 ## 📬 Contact
 
 **Dr. Chukwuma Onyeije**
-- 🌐 Website: [DoctorsWhoCode.com](https://doctorswhocode.com)
+- 🌐 Website: [DoctorsWhoCode.com](https://doctorswhocode.blog/)
 - 💼 Project: [CodeCraftMD.com](https://codecraftmd.com)
 - 🏥 Position: Maternal-Fetal Medicine Specialist, Medical Director at Atlanta Perinatal Associates
 
