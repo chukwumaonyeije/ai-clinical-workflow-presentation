@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Practical AI Tech Stack for Physicians Who Code">
+    <meta name="author" content="Dr. Chukwuma Onyeije">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AI Clinical Workflow Presentation">
+    <meta property="og:description" content="A Practical AI Tech Stack for Physicians Who Code">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/6366F1/ffffff?text=AI+Clinical+Workflow">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Clinical Workflow Presentation">
+    <meta name="twitter:description" content="A Practical AI Tech Stack for Physicians Who Code">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/6366F1/ffffff?text=AI+Clinical+Workflow">
+    
+    <title>AI Clinical Workflow Presentation</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366F1;
+            --secondary: #8B5CF6;
+            --accent: #06B6D4;
+            --bg-dark: #0f0f23;
+            --bg-card: rgba(255, 255, 255, 0.05);
+            --text: #E5E7EB;
+            --text-muted: #9CA3AF;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+        
+        [data-theme="light"] {
+            --bg-dark: #ffffff;
+            --bg-card: rgba(99, 102, 241, 0.05);
+            --text: #1F2937;
+            --text-muted: #6B7280;
+            --border: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animated gradient background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                var(--primary) 0%, 
+                var(--secondary) 25%, 
+                var(--accent) 50%, 
+                var(--secondary) 75%, 
+                var(--primary) 100%);
+            animation: gradient 20s ease infinite;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        @keyframes gradient {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-25%, -25%); }
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 15, 35, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        [data-theme="light"] nav {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        .theme-toggle {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .theme-toggle:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        /* CTA Buttons */
+        .cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            margin: 0.5rem;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+        }
+        
+        .cta:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        [data-theme="light"] .cta-secondary {
+            color: var(--primary);
+        }
+        
+        .cta-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            margin-top: 6rem;
+        }
+        
+        footer p {
+            color: var(--text-muted);
+        }
+        
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(15, 15, 35, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .cta {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">AI Clinical Workflow</div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+            <ul id="nav-menu">
+                <li><a href="../index.html">🚀 Slides</a></li>
+                <li><a href="https://doctorswhocode.blog/blog/">📖 Blog</a></li>
+                <li><a href="https://codecraftmd.com/">💼 CodeCraftMD</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">💡</button></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>🏥 The Future of Clinical Documentation</h1>
+                <p>A Practical AI Tech Stack for Physicians Who Code</p>
+                <p style="font-size: 1rem; margin-bottom: 2rem;">By Dr. Chukwuma Onyeije, MFM Specialist & Founder of Doctors Who Code</p>
+                <div>
+                    <a href="../index.html" class="cta">View Presentation →</a>
+                    <a href="https://github.com/chukwumaonyeije/ai-clinical-workflow-presentation" class="cta cta-secondary">GitHub Repository</a>
+                </div>
+                
+                <div style="margin-top: 4rem; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--primary);">About This Presentation</h2>
+                    <p style="margin-bottom: 1.5rem;">This interactive presentation explores the future of clinical documentation through a three-component AI workflow:</p>
+                    <ul style="list-style-position: inside; margin-left: 1rem;">
+                        <li style="margin-bottom: 0.8rem;">🎤 <strong>Ambient Transcription</strong> - Capturing clinical encounters passively</li>
+                        <li style="margin-bottom: 0.8rem;">🧠 <strong>EvidenceMD</strong> - Contextual clinical reasoning with large context windows</li>
+                        <li style="margin-bottom: 0.8rem;">💼 <strong>CodeCraftMD</strong> - Automated billing and compliance</li>
+                    </ul>
+                    
+                    <h3 style="font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1rem; color: var(--primary);">Key Topics Covered</h3>
+                    <ul style="list-style-position: inside; margin-left: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">✅ The shift from search to reasoning in clinical AI</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Building an end-to-end ambient → reasoning → billing pipeline</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Technical architecture for physician-developers</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Real-world implementation in maternal-fetal medicine practice</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Full tech stack recommendations (React, FastAPI, FHIR, etc.)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 AI Clinical Workflow Presentation by Dr. Chukwuma Onyeije</p>
+            <p style="margin-top: 1rem;">
+                <a href="https://doctorswhocode.blog/blog/">Blog</a> • 
+                <a href="https://codecraftmd.com/">CodeCraftMD</a> • 
+                <a href="https://github.com/chukwumaonyeije">GitHub</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Theme toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
